@@ -25,5 +25,6 @@ Route::get('pizzas/{id}',function($id){
 
 });
 Route::get('cofee',function(){
+    // hi amigso
 
 });
