@@ -24,3 +24,6 @@ Route::get('pizzas/{id}',function($id){
     return view('details',['id'=>$id]);
 
 });
+Route::get('cofee',function(){
+
+});
