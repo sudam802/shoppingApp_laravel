@@ -1,18 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PizzaController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route :: get('/pizzas','PizzaContorller@index');
-
-Route::get('pizzas/{id}','PizzaController@show');
-Route::get('cofee',function(){
-
-});
-
-Route::get('beer',function(){
-
-});
+// Corrected routes with the array syntax
+Route::get('/pizzas', [PizzaController::class, 'index']);
+Route::get('/pizzas/{id}', [PizzaController::class, 'show']);
