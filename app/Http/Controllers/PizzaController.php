@@ -11,10 +11,15 @@ class PizzaController extends Controller
     public function index(){
         $pizzas=Pizza::all();
         
-        return view('pizzas',['pizzas'=>$pizzas]);
+        return view('pizzas.index',['pizzas'=>$pizzas]);
     }
     public function show($id){
-        return view('details',['id'=>$id]);
+        $item=Pizza::findOrFail($id);
+        return view('pizzas.show',['id'=>$item]);
     
+    }
+
+    public function create(){
+        return view('pizzas.create');
     }
 }
